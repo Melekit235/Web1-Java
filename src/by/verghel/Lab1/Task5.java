@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Task5 {
     public static void main(String[] args) {
-        //int[] A = {4, 3, 8, 22,23,9,10,11};
-
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input n");

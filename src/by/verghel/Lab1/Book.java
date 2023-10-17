@@ -43,7 +43,7 @@ public class Book implements Cloneable, Comparable<Book> {
 
         Book book = (Book) object;
 
-        return title == book.title && author == book.author && price == book.price;
+        return title.equals(book.title) && author.equals(book.author) && price == book.price;
     }
 
     @Override
@@ -55,9 +55,7 @@ public class Book implements Cloneable, Comparable<Book> {
         result = prime * result + ((author == null) ? 0 : author.hashCode());
         result = prime * result + price;
 
-        int intHashCode = (int) (result % Integer.MAX_VALUE);
-
-        return intHashCode;
+        return (int) (result % Integer.MAX_VALUE);
     }
 
     public String toString(){
@@ -74,7 +72,7 @@ public class Book implements Cloneable, Comparable<Book> {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         return new Book(this);
     }
 
@@ -132,7 +130,4 @@ public class Book implements Cloneable, Comparable<Book> {
             return Integer.compare(book1.getPrice(), book2.getPrice());
         }
     }
-
-
-
 }

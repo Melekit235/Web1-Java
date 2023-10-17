@@ -14,16 +14,14 @@ public class Task2 {
     }
 
     public static boolean checkAffiliation(float x, float y) {
-        boolean answer = false;
 
         if (y > 5 || y < -3 || x > 6 || x < -6){
-            return answer;
+            return false;
         }
         if (((x > -6 && x < -4) || (x > 4 && x < 6)) && y > 0){
-            return answer;
+            return false;
         }
 
-        answer = true;
-        return answer;
+        return true;
     }
 }

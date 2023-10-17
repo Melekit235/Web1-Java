@@ -24,9 +24,7 @@ public class ProgrammerBook extends Book{
         result = prime * result + ((author == null) ? 0 : author.hashCode());
         result = prime * result + price;
 
-        int intHashCode = (int) (result % Integer.MAX_VALUE);
-
-        return intHashCode;
+        return (int) (result % Integer.MAX_VALUE);
     }
 
     public boolean equals(Object object){
@@ -40,7 +38,7 @@ public class ProgrammerBook extends Book{
 
         ProgrammerBook programmerBook = (ProgrammerBook) object;
 
-        return getTitle() == programmerBook.getTitle() && getAuthor() == programmerBook.getAuthor() && getPrice() == programmerBook.getPrice() && language == programmerBook.language && level == programmerBook.level;
+        return getTitle().equals(programmerBook.getTitle()) && getAuthor().equals(programmerBook.getAuthor()) && getPrice() == programmerBook.getPrice() && language.equals(programmerBook.language) && level == programmerBook.level;
     }
 
     public String toString(){

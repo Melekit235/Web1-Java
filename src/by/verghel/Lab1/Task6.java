@@ -15,9 +15,6 @@ public class Task6 {
         }
 
         outMatrix(makeMatrix(a, n), n);
-        //System.out.println();
-        //System.out.println();
-        //outMatrix(new int[][]{{1, 2, 3, 4, 5}, {2, 3, 4, 5, 1}, {3, 4, 5, 1, 2}, {4, 5, 1, 2, 3}, {5, 1, 2, 3, 4}},n);
     }
 
     public static int[][] makeMatrix(int[] a, int n) {

@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 
 public class Test15 {
     @Test(timeout = 2000)
-    public void Task15() throws Exception{
+    public void Task15() throws Exception {
         List<Book> books = new ArrayList<>();
         books.add(new Book("Book 3", "Author 3", 30, 3));
         books.add(new Book("Book 1", "Author 1", 10, 1));
@@ -26,7 +26,7 @@ public class Test15 {
         boolean ok = true;
         int i = 0;
         for (Book book : books) {
-            if(!book.toString().equals(sortedBooks[i])){
+            if (!book.toString().equals(sortedBooks[i])) {
                 ok = false;
                 break;
             }

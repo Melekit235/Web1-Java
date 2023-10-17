@@ -9,31 +9,31 @@ public class Book implements Cloneable, Comparable<Book> {
     private static int edition;
     private int isbn;
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
-    public String getAuthor(){
+    public String getAuthor() {
         return author;
     }
 
-    public int getPrice(){
+    public int getPrice() {
         return price;
     }
 
-    public int getEdition(){
+    public int getEdition() {
         return edition;
     }
 
-    public Book(String title, String author, int price, int isbn){
+    public Book(String title, String author, int price, int isbn) {
         this.title = title;
         this.author = author;
         this.price = price;
         this.isbn = isbn;
     }
 
-    public boolean equals(Object object){
-        if (this == object){
+    public boolean equals(Object object) {
+        if (this == object) {
             return true;
         }
 
@@ -47,7 +47,7 @@ public class Book implements Cloneable, Comparable<Book> {
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         int prime = 31;
         long result = 1;
 
@@ -58,10 +58,9 @@ public class Book implements Cloneable, Comparable<Book> {
         return (int) (result % Integer.MAX_VALUE);
     }
 
-    public String toString(){
+    public String toString() {
         return "Book{" + "title='" + title + '\'' + ", author='" + author + '\'' + ", price=" + price + ", edition=" + edition + ", isbn=" + isbn + '}';
     }
-
 
 
     public Book(Book other) {
@@ -80,11 +79,6 @@ public class Book implements Cloneable, Comparable<Book> {
     public int compareTo(Book o) {
         return Integer.compare(this.isbn, o.isbn);
     }
-
-
-
-
-
 
 
     public static class TitleComparator implements Comparator<Book> {

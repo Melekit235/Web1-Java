@@ -10,7 +10,7 @@ public class Test1 {
     public void Task1() throws Exception {
         Task1 task1 = new Task1();
 
-        double res = task1.calculateExpression(1,1);
+        double res = task1.calculateExpression(1, 1);
         boolean ok = res == 1.6089406034772686;
         assertTrue("Task1 failed", ok);
     }

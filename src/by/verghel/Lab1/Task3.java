@@ -6,7 +6,7 @@ import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
 public class Task3 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input a");
         int a = scanner.nextInt();
@@ -17,14 +17,15 @@ public class Task3 {
 
         calculateTg(a, b, h);
     }
-    public static void calculateTg(int a, int b, int h){
-        for (int i = a; i <= b; i += h){
-            System.out.println(i+" "+ tg(i));
+
+    public static void calculateTg(int a, int b, int h) {
+        for (int i = a; i <= b; i += h) {
+            System.out.println(i + " " + tg(i));
         }
     }
 
-    public static double tg(int x){
-        return sin(x)/cos(x);
+    public static double tg(int x) {
+        return sin(x) / cos(x);
     }
 
 }

@@ -11,13 +11,13 @@ import static org.junit.Assert.assertTrue;
 
 public class Test16 {
     @Test(timeout = 2000)
-    public void Task16() throws Exception{
+    public void Task16() throws Exception {
         boolean ok = true;
 
         List<Book> books = new ArrayList<>();
         books.add(new Book("C", "A", 30, 3));
-        books.add(new Book("A", "C", 10,2));
-        books.add(new Book("B", "B", 20,1));
+        books.add(new Book("A", "C", 10, 2));
+        books.add(new Book("B", "B", 20, 1));
 
         int i = 0;
         String[] sortedTitle = {"Book{title='A', author='C', price=10, edition=0, isbn=2}",
@@ -35,7 +35,7 @@ public class Test16 {
 
         Collections.sort(books, new Book.TitleComparator());
         for (Book book : books) {
-            if(!book.toString().equals(sortedTitle[i])){
+            if (!book.toString().equals(sortedTitle[i])) {
                 ok = false;
                 break;
             }
@@ -45,7 +45,7 @@ public class Test16 {
         i = 0;
         Collections.sort(books, new Book.TitleAuthorComparator());
         for (Book book : books) {
-            if(!book.toString().equals(sortedTitleAuthor[i])){
+            if (!book.toString().equals(sortedTitleAuthor[i])) {
                 ok = false;
                 break;
             }
@@ -55,7 +55,7 @@ public class Test16 {
         i = 0;
         Collections.sort(books, new Book.AuthorTitleComparator());
         for (Book book : books) {
-            if(!book.toString().equals(sortedAuthorTitle[i])){
+            if (!book.toString().equals(sortedAuthorTitle[i])) {
                 ok = false;
                 break;
             }
@@ -65,7 +65,7 @@ public class Test16 {
         i = 0;
         Collections.sort(books, new Book.AuthorTitlePriceComparator());
         for (Book book : books) {
-            if(!book.toString().equals(sortedAuthorTitlePrice[i])){
+            if (!book.toString().equals(sortedAuthorTitlePrice[i])) {
                 ok = false;
                 break;
             }

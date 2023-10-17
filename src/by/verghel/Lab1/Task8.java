@@ -3,22 +3,22 @@ package by.verghel.Lab1;
 import java.util.Scanner;
 
 public class Task8 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input n");
         int n = scanner.nextInt();
         int[] a = new int[n];
-        for (int i = 0; i< n; i++){
-            System.out.println("Input " + i + " element of array" );
+        for (int i = 0; i < n; i++) {
+            System.out.println("Input " + i + " element of array");
             a[i] = scanner.nextInt();
         }
 
         System.out.println("Input m");
         int m = scanner.nextInt();
         int[] b = new int[m];
-        for (int i = 0; i< m; i++){
-            System.out.println("Input " + i + " element of array" );
+        for (int i = 0; i < m; i++) {
+            System.out.println("Input " + i + " element of array");
             b[i] = scanner.nextInt();
         }
 
@@ -31,12 +31,11 @@ public class Task8 {
         int i = 0;
         int j = 0;
         int z = 0;
-        while (i < n && j < m){
-            if(a[i] < b[j]){
+        while (i < n && j < m) {
+            if (a[i] < b[j]) {
                 mergedArray[z] = a[i];
                 i++;
-            }
-            else{
+            } else {
                 mergedArray[z] = b[j];
                 j++;
             }
@@ -58,8 +57,8 @@ public class Task8 {
         return mergedArray;
     }
 
-    private static void outArray(int[] a, int n){
-        for (int i = 0; i < n; i++){
+    private static void outArray(int[] a, int n) {
+        for (int i = 0; i < n; i++) {
             System.out.print(a[i] + " ");
         }
     }

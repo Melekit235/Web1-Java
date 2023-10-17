@@ -1,6 +1,6 @@
 package by.verghel.Lab1;
 
-public class ProgrammerBook extends Book{
+public class ProgrammerBook extends Book {
 
     private String language;
     private int level;
@@ -13,7 +13,7 @@ public class ProgrammerBook extends Book{
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         int prime = 31;
         long result = 1;
 
@@ -27,8 +27,8 @@ public class ProgrammerBook extends Book{
         return (int) (result % Integer.MAX_VALUE);
     }
 
-    public boolean equals(Object object){
-        if (this == object){
+    public boolean equals(Object object) {
+        if (this == object) {
             return true;
         }
 
@@ -41,7 +41,7 @@ public class ProgrammerBook extends Book{
         return getTitle().equals(programmerBook.getTitle()) && getAuthor().equals(programmerBook.getAuthor()) && getPrice() == programmerBook.getPrice() && language.equals(programmerBook.language) && level == programmerBook.level;
     }
 
-    public String toString(){
+    public String toString() {
         return "Book{" + "title='" + getTitle() + '\'' + ", author='" + getAuthor() + '\'' + ", price=" + getPrice() + ", edition=" + getEdition() + ", language='" + language + '\'' + ", level=" + level + '}';
     }
 }

@@ -9,8 +9,8 @@ public class Task5 {
         System.out.println("Input n");
         int n = scanner.nextInt();
         int[] A = new int[n];
-        for (int i = 0; i< n; i++){
-            System.out.println("Input " + i + " element of array" );
+        for (int i = 0; i < n; i++) {
+            System.out.println("Input " + i + " element of array");
             A[i] = scanner.nextInt();
         }
 

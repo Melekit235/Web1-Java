@@ -8,8 +8,8 @@ public class Task16 {
     public static void main(String[] args) {
         List<Book> books = new ArrayList<>();
         books.add(new Book("C", "A", 30, 3));
-        books.add(new Book("A", "C", 10,2));
-        books.add(new Book("B", "B", 20,1));
+        books.add(new Book("A", "C", 10, 2));
+        books.add(new Book("B", "B", 20, 1));
 
         System.out.println("Сортировка по названию:");
         Collections.sort(books, new Book.TitleComparator());

@@ -19,7 +19,7 @@ public class Task1 {
     }
 
     public static double calculateExpression(int x, int y) {
-        double answer = ((1 + (sin(x + y) * sin(x + y))) / (2 + abs(x - 2*x / (2 + x * x * y * y))) + x);
+        double answer = ((1 + (sin(x + y) * sin(x + y))) / (2 + abs(x - 2 * x / (2 + x * x * y * y))) + x);
         return answer;
     }
 }
